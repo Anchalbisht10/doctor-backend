@@ -18,10 +18,17 @@ connectDB()
 connectCloudinary()
 
 // middlewares
-app.use(express.json())
 app.use(cors({
-  origin:"*"
-}))
+  origin: [
+    "http://localhost:5173",
+    "https://doctor-frontend-sand.vercel.app/"
+  ],
+  credentials: true
+}));
+//so this is for cors code ok
+
+app.use(express.json())
+
 
 // api endpoints
 app.use("/api/user", userRouter)
