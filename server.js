@@ -20,10 +20,13 @@ connectCloudinary()
 // middlewares
 // "https://doctor-frontend-sand.vercel.app"
 app.use(cors({
-  origin:"https://doctor-frontend-sand.vercel.app",
+  origin: [
+    "http://localhost:5173",
+    "https://doctor-frontend-sand.vercel.app"
+  ],
+  credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization", "token"],
-  credentials: true
+  allowedHeaders: ["Content-Type", "Authorization", "token"]
 }));
 
 app.options('*',cors());
