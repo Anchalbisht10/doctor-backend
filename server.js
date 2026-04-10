@@ -25,6 +25,15 @@ app.use(cors({
   ],
    credentials: true,
 }));
+
+app.options('*',cors());
+
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  next();
+});
 //so this is for cors code ok
 
 app.use(express.json())
