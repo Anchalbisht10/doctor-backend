@@ -35,6 +35,8 @@ app.use("/api/user", userRouter)
 app.use("/api/admin", adminRouter)
 app.use("/api/doctor", doctorRouter)
 
+console.log("Cors fix Applied");
+
 app.get("/", (req, res) => {
   res.send("API Working")
 });
