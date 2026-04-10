@@ -21,7 +21,7 @@ connectCloudinary()
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://doctor-frontend-sand.vercel.app/"
+    "https://doctor-frontend-sand.vercel.app"
   ],
   credentials: true
 }));
